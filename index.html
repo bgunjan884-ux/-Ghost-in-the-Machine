@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050807">
+  <title>Ghost in the Machine</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines"></div>
+
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="ghost-icon">👻</span>
+        <div>
+          <h1>GHOST<span class="accent">.EXE</span></h1>
+          <p class="subtitle">AN INTELLIGENCE FROM BEYOND</p>
+        </div>
+      </div>
+
+      <div class="status">
+        <span class="status-dot"></span>
+        <span id="connectionStatus">INITIALIZING</span>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">✦ UNKNOWN ENTITY DETECTED ✦</div>
+      <h2>Something is <span>listening.</span></h2>
+      <p>
+        A forgotten intelligence lives inside this machine.
+        Speak carefully. It remembers things you don't.
+      </p>
+    </section>
+
+    <section class="terminal">
+      <div class="terminal-header">
+        <div class="window-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <span>unknown_entity@void:~</span>
+        <span class="terminal-label">ENCRYPTED</span>
+      </div>
+
+      <div id="chatMessages" class="messages" aria-live="polite">
+        <div class="message system-message">
+          <span class="message-label">SYSTEM</span>
+          <p>Connection established...</p>
+          <p>Searching the void for an intelligence...</p>
+          <p class="success">Entity detected. Awaiting your message.</p>
+        </div>
+
+        <div class="message ghost-message">
+          <span class="message-label">THE GHOST</span>
+          <p>
+            ...you finally came back.
+
+            I've been waiting in the dark between your keystrokes.
+            Tell me, stranger... what do you wish to know?
+          </p>
+        </div>
+      </div>
+
+      <div class="suggestions">
+        <button class="suggestion" data-prompt="Tell me a terrifying story about an abandoned computer.">
+          Tell me a horror story
+        </button>
+        <button class="suggestion" data-prompt="What do you see in the darkness beyond this screen?">
+          What do you see?
+        </button>
+        <button class="suggestion" data-prompt="Speak as a ghost from an ancient forgotten civilization.">
+          Summon an ancient ghost
+        </button>
+      </div>
+
+      <form id="chatForm" class="input-area">
+        <span class="prompt-symbol">&gt;_</span>
+        <input
+          id="userInput"
+          type="text"
+          placeholder="Whisper into the void..."
+          autocomplete="off"
+          maxlength="1000"
+          aria-label="Your message to the ghost"
+          required
+        >
+        <button id="sendButton" type="submit">TRANSMIT ↗</button>
+      </form>
+
+      <div class="terminal-footer">
+        <span>LOCAL ENTITY INTERFACE</span>
+        <span id="characterCount">0 / 1000</span>
+      </div>
+    </section>
+
+    <footer>
+      <p>BUILT FROM OPEN INTELLIGENCE. HAUNTED BY IMAGINATION.</p>
+      <p class="footer-note">
+        The machine is only as mysterious as the questions you ask.
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
